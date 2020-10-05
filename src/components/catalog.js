@@ -79,7 +79,7 @@ function quantityOfCart(items) {
 }
 
 let catalogOfIndex = {
-    urlBD: 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/bdTovar.json',
+    urlBD: 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/catalog.json',
     container: null,
     button: null,
     items: [],
