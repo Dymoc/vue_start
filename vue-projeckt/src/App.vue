@@ -6,6 +6,7 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/start">Start</router-link>
     </div> -->
+    <Catalog/>
     {{tovars[0].productName}}
     {{tovars[1].productName}}
     <router-view />
@@ -14,11 +15,13 @@
 
 <script>
 import Header from '@/blocks/Header.vue';
+import Catalog from '@/components/Catalog.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
+    Catalog,
   },
   data() {
     return {
