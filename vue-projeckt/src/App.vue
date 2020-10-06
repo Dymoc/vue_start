@@ -1,11 +1,13 @@
 <template>
   <div>
-    <Header></Header>
+    <Header/>
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/start">Start</router-link>
     </div> -->
+    {{tovars[0].productName}}
+    {{tovars[1].productName}}
     <router-view />
   </div>
 </template>
@@ -17,6 +19,24 @@ export default {
   name: 'App',
   components: {
     Header,
+  },
+  data() {
+    return {
+      tovars: [
+        {
+          productName: 'MANGO PEOPLE T-SHIRT',
+          productPrice: 52,
+          productImg: 'https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg',
+          productId: 'prod_0',
+        },
+        {
+          productName: 'BANANA PEOPLE T-SHIRT',
+          productPrice: 52,
+          productImg: 'https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg',
+          productId: 'prod_1',
+        },
+      ],
+    };
   },
 };
 </script>
@@ -33,7 +53,7 @@ export default {
 #nav {
   padding: 30px;
 }
-.center{
+.center {
   padding: 0 calc(50% - 570px);
 }
 a {
@@ -63,7 +83,7 @@ a:hover {
 
 .button:hover {
   -webkit-transform: scale3d(1.3);
-          transform: scale3d(1.3);
+  transform: scale3d(1.3);
   border: 1px solid black;
 }
 </style>
