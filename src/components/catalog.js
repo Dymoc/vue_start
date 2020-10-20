@@ -32,15 +32,24 @@ function addToCart(productId, items) {
     for (el of catalogOfCart.items) {
         if (el.productId == productId) {
             el.productQuantity += 1;
+        } else {
+            for (el of items) {
+                if (el.productId == productId) {
+                    el.productQuantity = 1;
+                    catalogOfCart.items.push(el);
+                }
+            }
         }
     }
-    for (el of items) {
-        if (el.productId == productId) {
-            catalogOfCart.items.push(el);
-        }
-    }
+    // for (el of items) {
+    //     if (el.productId == productId) {
+    //         el.productQuantity = 1;
+    //         catalogOfCart.items.push(el);
+    //     }
+    // }
     catalogOfCart.items = catalogOfCart.items.filter(getUniqueItems);
     catalogOfCart.init();
+    console.log('yes add');
 }
 
 function delFromCart(productId, items) {
@@ -90,9 +99,9 @@ let catalogOfIndex = {
         setTimeout(() => {
             this.button = document.querySelectorAll('.add_to_cart');
             this._handleActionsButtonAddToCart();
-        }, 200);
+        }, 400);
     },
-    _fillCatalog() {       
+    _fillCatalog() {
         fetch(this.urlBD)
             .then(data => data.json())
             .then(items => this.items = items)
@@ -132,7 +141,7 @@ let catalogOfCatalog = {
         setTimeout(() => {
             this.button = document.querySelectorAll('.add_to_cart');
             this._handleActionsButtonAddToCart();
-        }, 200);
+        }, 400);
     },
     _fillCatalog() {
         this.items = getArrayOfObjects(9);
@@ -171,7 +180,7 @@ let catalogOfCart = {
         setTimeout(() => {
             this.button = document.querySelectorAll('.delFromCart');
             this._handleActionsButtonDelFromCart();
-        }, 200);
+        }, 600);
 
     },
     _render() {
