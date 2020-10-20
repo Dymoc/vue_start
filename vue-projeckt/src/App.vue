@@ -15,15 +15,13 @@
 
 <script>
 import Header from '@/blocks/Header.vue';
-import Catalog from '@/components/Catalog.vue'; 
-
+import Catalog from '@/components/Catalog.vue';
 // const url = 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/catalog.json';
 
 // const axios = await axois.get(url);
 
 export default {
   name: 'App',
-  store: store,
   components: {
     Header,
     Catalog,
