@@ -27,7 +27,6 @@ export default {
     Catalog,
   },
   props: {
-    // store,
   },
   data() {
     return {
