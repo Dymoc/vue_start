@@ -1,5 +1,9 @@
 <template>
   <div>
+    <head>
+          <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet"
+        type="text/css">
+    </head>
     <Header/>
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -7,14 +11,14 @@
       <router-link to="/start">Start</router-link>
     </div> -->
     <Catalog/>
-    {{tovars[0].productName}}
-    {{tovars[1].productName}}
+    <Menu/>
     <router-view />
   </div>
 </template>
 
 <script>
 import Header from '@/blocks/Header.vue';
+import Menu from '@/blocks/Menu.vue';
 import Catalog from '@/components/Catalog.vue';
 // const url = 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/catalog.json';
 
@@ -24,6 +28,7 @@ export default {
   name: 'App',
   components: {
     Header,
+    Menu,
     Catalog,
   },
   props: {
@@ -59,9 +64,27 @@ export default {
   color: #2c3e50;
 }
 
+* {
+  margin: 0 auto;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  width: 1600px;
+}
+
 #nav {
   padding: 30px;
 }
+
+.siteColor {
+  font-weight: 900;
+  color: #f16d7f;
+}
+
 .center {
   padding: 0 calc(50% - 570px);
 }
