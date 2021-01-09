@@ -5,21 +5,20 @@
         type="text/css">
     </head>
     <Header/>
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/start">Start</router-link>
-    </div> -->
-    <Catalog/>
+    <!-- <Catalog/>  для экспириментов -->
     <Menu/>
     <router-view />
+    <Subscribe/>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Header from '@/blocks/Header.vue';
 import Menu from '@/blocks/Menu.vue';
-import Catalog from '@/components/Catalog.vue';
+// import Catalog from '@/components/Catalog.vue';
+import Subscribe from '@/blocks/Subscribe.vue';
+import Footer from '@/blocks/Footer.vue';
 // const url = 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/catalog.json';
 
 // const axios = await axois.get(url);
@@ -29,7 +28,9 @@ export default {
   components: {
     Header,
     Menu,
-    Catalog,
+    // Catalog,
+    Subscribe,
+    Footer,
   },
   props: {
     // store,
@@ -52,16 +53,20 @@ export default {
       ],
     };
   },
+  // methods: {
+  //  function abd() {
+  //    console.log(25);
+  //  }
+  // },
 };
 </script>
 
 <style lang="css">
+@import "~font-awesome/css/font-awesome.min.css";
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: 'Lato', sans-serif;
+  width: 1600px;
 }
 
 * {
@@ -69,11 +74,6 @@ export default {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-body {
-  font-family: 'Lato', sans-serif;
-  width: 1600px;
 }
 
 #nav {
