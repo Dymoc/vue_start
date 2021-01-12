@@ -109,5 +109,8 @@ export default {
   line-height: 32px;
   outline: none;
 }
+.header__button img {
+  height: 22px;
+}
 
 </style>
