@@ -2,12 +2,12 @@
   <div>
     <header class="header center">
       <div class="header__left">
-        <Logo></Logo>
-        <SearchForm></SearchForm>
+        <Logo/>
+        <SearchForm/>
       </div>
       <div class="header__right">
-        <ShoppingCart></ShoppingCart>
-        <ButtonAccount></ButtonAccount>
+        <ShopingCart/>
+        <ButtonAccount/>
       </div>
     </header>
   </div>
@@ -16,7 +16,7 @@
 <script>
 import Logo from '@/components/Logo.vue';
 import SearchForm from '@/components/SearchForm.vue';
-import ShoppingCart from '@/components/ShoppingCart.vue';
+import ShopingCart from '@/components/ShopingCart.vue';
 import ButtonAccount from '@/components/ButtonAccount.vue';
 
 export default {
@@ -24,7 +24,7 @@ export default {
   components: {
     Logo,
     SearchForm,
-    ShoppingCart,
+    ShopingCart,
     ButtonAccount,
   },
 };
@@ -58,14 +58,6 @@ export default {
 
 .header__right {
   position: relative;
-}
-
-.header__right_img{
-  position: relative;
-}
-
-.header__right_img:hover .myCart__list {
-  display: block;
 }
 
 </style>

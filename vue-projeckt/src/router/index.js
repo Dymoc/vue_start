@@ -9,22 +9,37 @@ const routes = [
     component: Home,
   },
   // {
-  //   path: '/',
-  //   name: 'Start',
-  //   component: Start,
+  //   path: '/CatalogMan',
+  //   name: 'CatalogMan',
+  //   component: CatalogMan,
+  // },
+  // {
+  //   path: '/about',
+  //   name: 'About',
+  //   // route level code-splitting
+  //   // this generates a separate chunk (about.[hash].js) for this route
+  //   // which is lazy-loaded when the route is visited.
+  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
   // },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    path: '/CatalogMan',
+    name: 'CatalogMan',
+    component: () => import(/* webpackChunkName: "start" */ '../views/CatalogMan.vue'),
   },
   {
-    path: '/start',
-    name: 'Start',
-    component: () => import(/* webpackChunkName: "start" */ '../views/Start.vue'),
+    path: '/Checkout',
+    name: 'Checkout',
+    component: () => import(/* webpackChunkName: "start" */ '../views/Checkout.vue'),
+  },
+  {
+    path: '/ShopingCart',
+    name: 'ShopingCart',
+    component: () => import(/* webpackChunkName: "start" */ '../views/ShopingCart.vue'),
+  },
+  {
+    path: '/SinglePage',
+    name: 'SinglePage',
+    component: () => import(/* webpackChunkName: "start" */ '../views/SinglePage.vue'),
   },
 ];
 

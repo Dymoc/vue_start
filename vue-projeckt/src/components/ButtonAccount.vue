@@ -1,6 +1,6 @@
 <template>
   <details class="button">
-    <summary class="myAccount">My account</summary>
+    <summary class="myAccount"  @click="fal()">My account</summary>
     <ul class="myAccount__list">
       <li class="myAccount__link">
         <a href="#"> Регистрация</a>
@@ -13,8 +13,14 @@
 </template>
 
 <script>
+
 export default {
   name: 'ButtonAccount',
+  methods: {
+    fal() {
+      console.log(25);
+    },
+  },
 };
 </script>
 
