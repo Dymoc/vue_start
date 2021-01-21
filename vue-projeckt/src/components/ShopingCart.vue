@@ -1,6 +1,6 @@
 <template>
 <div class="header__right_img">
-    <a href="ShoppingCart.html">
+    <a href="ShopingCart">
       <img class="header__cart" src="../assets/imgs/cart.png" alt="cart" />
     </a>
     </div>
@@ -13,6 +13,14 @@ export default {
 </script>
 
 <style lang="css">
+.header__right_img{
+  position: relative;
+}
+
+.header__right_img:hover .myCart__list {
+  display: block;
+}
+
 .header__cart {
   margin-right: 26px;
   color: white;
