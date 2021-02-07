@@ -1,11 +1,11 @@
 <template>
-        <artical class="feature_box_banner_sales">
+        <div class="feature_box_banner_sales">
             <img class="feature_box_banner_img" src="../assets/imgs/sales.png" alt="">
             <h1 class="feature_box_banner_h1">Sales &amp; discounts</h1>
             <p class="feature_box_banner_p">Worldwide delivery on all. Authorit tively morph
                   next-generation innov tion
                 with extensive models.</p>
-        </artical>
+        </div>
 </template>
 
 <script>

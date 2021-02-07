@@ -1,10 +1,10 @@
 <template>
-     <artical class="feature__box_delivery">
+     <div class="feature__box_delivery">
           <img src="../assets/imgs/delivery.png" alt="">
           <h1>Free Delivery</h1>
           <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with
                extensive models.</p>
-     </artical>
+     </div>
 </template>
 
 <script>

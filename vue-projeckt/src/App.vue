@@ -5,7 +5,6 @@
         type="text/css">
     </head>
     <Header/>
-    <!-- <Catalog/>  для экспириментов -->
     <Menu/>
     <router-view />
     <Subscribe/>
@@ -16,48 +15,31 @@
 <script>
 import Header from '@/blocks/Header.vue';
 import Menu from '@/blocks/Menu.vue';
-// import Catalog from '@/components/Catalog.vue';
 import Subscribe from '@/blocks/Subscribe.vue';
 import Footer from '@/blocks/Footer.vue';
-// const url = 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/catalog.json';
-
-// const axios = await axois.get(url);
+import { mapActions } from 'vuex';
 
 export default {
   name: 'App',
   components: {
     Header,
     Menu,
-    // Catalog,
     Subscribe,
     Footer,
   },
-  props: {
-    // store,
-  },
-  data() {
-    return {
-      tovars: [
-        {
-          productName: 'MANGO PEOPLE T-SHIRT',
-          productPrice: 52,
-          productImg: 'https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg',
-          productId: 'prod_0',
-        },
-        {
-          productName: 'BANANA PEOPLE T-SHIRT',
-          productPrice: 52,
-          productImg: 'https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg',
-          productId: 'prod_1',
-        },
-      ],
-    };
-  },
-  // methods: {
-  //  function abd() {
-  //    console.log(25);
-  //  }
+  // computed: {
+  //   ...mapGetters([]),
   // },
+  methods: {
+    ...mapActions(['fillTovar']),
+  },
+  beforeMount() {
+    console.log('yes');
+    this.fillTovar();
+    console.log(this.$store.state.items);
+    // console.log(this.showTovar());
+    // this.data.items.map(this.$store.state.items);
+  },
 };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
 <div class="header__right_img">
-    <a href="ShopingCart">
-      <img class="header__cart" src="../assets/imgs/cart.png" alt="cart" />
+    <a href="SinglePage">
+      <img class="header__cart" src="../assets/imgs/cart.png" alt="cart">
     </a>
     </div>
 </template>
@@ -9,7 +9,12 @@
 <script>
 export default {
   name: 'ShoppingCart',
+  urlBD: 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/catalog.json',
+  items: [],
+  methods: {
+  },
 };
+
 </script>
 
 <style lang="css">

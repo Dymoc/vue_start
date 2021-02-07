@@ -1,11 +1,11 @@
 <template>
- <artical class="feature__box_quality">
+      <div class="feature__box_quality">
           <img src="../assets/imgs/quality.png" alt="">
           <h1>Quality assurance</h1>
           <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with
                 extensive models.
           </p>
-     </artical>
+     </div>
 </template>
 
 <script>

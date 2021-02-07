@@ -57,6 +57,7 @@
 import Breadcrumb from '@/blocks/Breadcrumb.vue';
 import SinglePageSlider from '@/blocks/SinglePageSlider.vue';
 import Discription from '@/blocks/Discription.vue';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'SinglePage',
@@ -65,6 +66,18 @@ export default {
     SinglePageSlider,
     Discription,
   },
+  methods: {
+    ...mapGetters(['showID', 'showTovar']),
+
+  },
+  mounted() {
+    console.log(this.$route.params.id);
+    // console.log(this.$store.state.items[this.$route.params.id].productName);
+    console.log(this.$route.params.id);
+    this.showID();
+    // this.showTovar(this.$route.params.id);
+  },
+
 };
 </script>
 
