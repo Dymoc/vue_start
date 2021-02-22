@@ -1,4 +1,5 @@
 import { createStore } from 'vuex';
+import goods from '@/store/goods';
 
 export default createStore({
   state: {
@@ -6,30 +7,36 @@ export default createStore({
     producs: null,
     urlBD: 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/catalog.json',
     items: [],
+    loading: false,
   },
   getters: {
-    showTovar(state) {
+    // showTovar: (state, id) => (id) => {
+    //   return state.items[id];
+    // },
+    getTovars(state) {
       return state.items;
+    },
+    getStatusLoading(state) {
+      return state.loading;
     },
     getProduct(state) {
       console.log(state.items);
       state.items.forEach((el) => {
         console.log(el);
       });
-      // console.log(this.$store.state.items);
-    },
-    showID(store, id = '123') {
-      console.log(store.items, id);
-      console.log(id);
     },
   },
   mutations: {
     SET_DATA_TOVAR(state, data) {
       state.items.push(data);
     },
+    SET_LOADING_DATA(state, status) {
+      state.loading = status;
+    },
   },
   actions: {
-    fillTovar({ commit }) {
+    fillTovars({ commit }) {
+      commit('SET_LOADING_DATA', true);
       const xhr = new XMLHttpRequest();
       xhr.open('GET', 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/catalog.json');
       xhr.onload = () => {
@@ -38,10 +45,14 @@ export default createStore({
         });
       };
       xhr.send();
+      commit('SET_LOADING_DATA', false);
+    },
+    showID(store, id) {
+      return id;
     },
   },
   modules: {
-
+    goods,
   },
   methods: {
   },

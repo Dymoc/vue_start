@@ -27,18 +27,11 @@ export default {
     Subscribe,
     Footer,
   },
-  // computed: {
-  //   ...mapGetters([]),
-  // },
   methods: {
-    ...mapActions(['fillTovar']),
+    ...mapActions(['fillTovars']),
   },
-  beforeMount() {
-    console.log('yes');
-    this.fillTovar();
-    console.log(this.$store.state.items);
-    // console.log(this.showTovar());
-    // this.data.items.map(this.$store.state.items);
+  created() {
+    this.fillTovars();
   },
 };
 </script>
