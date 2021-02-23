@@ -54,6 +54,4 @@ export default createStore({
   modules: {
     goods,
   },
-  methods: {
-  },
 });

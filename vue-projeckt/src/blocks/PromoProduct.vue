@@ -21,7 +21,6 @@ export default {
   methods: {
     ...mapActions(['addGood']),
     add(item) {
-      console.log(item);
       this.addGood(item);
     },
   },

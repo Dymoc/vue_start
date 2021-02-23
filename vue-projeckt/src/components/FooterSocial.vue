@@ -1,10 +1,10 @@
 <template>
      <div class="footer_social">
           <div class="social_icon"><a href="#"><i class="fa fa-facebook-f"></i></a></div>
-          <div class="social_icon"><a href="#"><i class="fa fa-twitter"></i></a></div>
-          <div class="social_icon"><a href="#"><i class="fa fa-linkedin-in"></i></a></div>
-          <div class="social_icon"><a href="#"><i class="fa fa-pinterest-p"></i></a></div>
-          <div class="social_icon"><a href="#"><i class="fa fa-google-plus-g"></i></a></div>
+          <div class="social_icon"><a href="#"><i class="fas fa-twitter"></i></a></div>
+          <div class="social_icon"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+          <div class="social_icon"><a href="#"><i class="fab fa-pinterest-p"></i></a></div>
+          <div class="social_icon"><a href="#"><i class="fab fa-google-plus-g"></i></a></div>
      </div>
 </template>
 
