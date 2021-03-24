@@ -1,11 +1,13 @@
 <template>
      <artical class="sc_product_cart">
-          <a href="SinglePage" class="sc_product_cart_a">
-               <img :src="item.productImg"
-                    alt="" class="sc_product_cart_a_img"></a>
+          <router-link :to="{ name: 'SinglePage', params: { id: item.productId }}"
+          class="sc_product_cart_a">
+               <img :src="item.productImg" alt="" class="sc_product_cart_a_img">
+          </router-link>
           <div class="sc_product_cart_info">
-               <a href="SinglePage" class="sc_product_cart_info_h1">
-                    {{ item.productName }}</a>
+               <router-link :to="{ name: 'SinglePage', params: { id: item.productId }}"
+                class="sc_product_cart_info_h1">{{ item.productName }}
+               </router-link>
                <div class="sc_product_cart_info_color"><span>Color:</span> Red</div>
                <div class="sc_product_cart_info_size"><span>Size:</span> Xll</div>
           </div>
