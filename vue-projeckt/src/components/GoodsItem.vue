@@ -3,7 +3,8 @@
      <li class="myCart__link">
           <div class="cart">
                <a href="single_page.html"><img :src = "item.productImg" alt=""
-                         class="cart__img" height="90px" style="margin-right:10px"></a>
+                         class="cart__img" height="90px" style="margin-right:10px">
+               </a>
                <div class="cart__discription">
                     <a href="single_page.html">
                          <div class="cart__name">{{ item.productName }}</div>
@@ -13,7 +14,7 @@
                          {{ item.productQuantity }}</span><span class="cart__coast_x">x</span>
                          ${{ item.productPrice }}</div>
                </div>
-               <a class="delFromCart" @click="del(item)"><i class="fa fa-trash-alt cart__action"
+               <a class="delFromCart" @click="del(item)"><i class="fas fa-backspace cart__action"
                :id = "item.productId"></i></a>
           </div>
      </li>

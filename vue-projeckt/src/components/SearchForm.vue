@@ -27,6 +27,7 @@
             </div>
           </details>
           <input type="text" placeholder="Search for Item..." />
+          <h1>{{ text }}</h1>
           <button class="header__button">
             <img src="../assets/imgs/search.png" alt="search" />
           </button>
@@ -36,6 +37,7 @@
 <script>
 export default {
   name: 'SearchForm',
+
 };
 </script>
 

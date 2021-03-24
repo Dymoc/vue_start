@@ -1,8 +1,8 @@
 <template>
 <div class="header__right_img">
-    <a @click="show">
+    <router-link :to="{name: 'ShopingCart'}">
       <img class="header__cart" src="../assets/imgs/cart.png" alt="cart">
-    </a>
+    </router-link>
     <div class="header__cart_quantity"></div>
     <Goods/>
   </div>

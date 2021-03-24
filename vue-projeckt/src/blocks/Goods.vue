@@ -1,7 +1,7 @@
 <template>
       <ul class="myCart__list">
         <ul id="myCart">
-             <h2 class="totalCoast" v-if = "goodsItems.length == 0">Корзина пуста</h2>
+             <h2 class="totalCoast nullGoods" v-if = "goodsItems.length == 0">Корзина пуста</h2>
           <GoodsItem
            v-for="item in goodsItems"
            v-bind:item="item"
@@ -12,8 +12,12 @@
           <div class="totalCoast__text">TOTAL</div>
           <div class="totalCoast__text" id="totalCoast">${{ totalCoast }}</div>
         </div>
-        <div class=" myCart__button" onclick="location ='checkout.html'">Checkout</div>
-        <div class=" myCart__button" onclick="location ='ShoppingCart.html'">Go to cart</div>
+        <router-link :to="{name: 'Checkout'}">
+          <div  class="myCart__button">Checkout</div>
+        </router-link>
+        <router-link :to="{name: 'ShopingCart'}">
+          <div  class="myCart__button">ShopingCart</div>
+        </router-link>
       </ul>
 </template>
 
@@ -91,6 +95,9 @@ export default {
   margin: 19px -15px 32px -15px;
 }
 
+.nullGoods {
+  justify-content: center;
+}
 .myCart__button {
   height: 50px;
   width: 225px;
@@ -110,4 +117,5 @@ export default {
   border: 1px solid #f16d7f;
   color: #f16d7f;
 }
+
 </style>

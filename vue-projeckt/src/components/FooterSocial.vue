@@ -1,10 +1,10 @@
 <template>
      <div class="footer_social">
           <div class="social_icon"><a href="#"><i class="fa fa-facebook-f"></i></a></div>
-          <div class="social_icon"><a href="#"><i class="fas fa-twitter"></i></a></div>
-          <div class="social_icon"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
-          <div class="social_icon"><a href="#"><i class="fab fa-pinterest-p"></i></a></div>
-          <div class="social_icon"><a href="#"><i class="fab fa-google-plus-g"></i></a></div>
+          <div class="social_icon"><a href="#"><i class="fa fa-twitter"></i></a></div>
+          <div class="social_icon"><a href="#"><i class="fa fa-linkedin-in"></i></a></div>
+          <div class="social_icon"><a href="#"><i class="fa fa-pinterest-p"></i></a></div>
+          <div class="social_icon"><a href="#"><i class="fa fa-google-plus-g"></i></a></div>
      </div>
 </template>
 
@@ -46,7 +46,7 @@ export default {
 }
 
 .fa {
-  font-size: 16px;
+  font-size: 32px;
   color: #b2b2b2;
   text-align: right;
   letter-spacing: 0.03em;

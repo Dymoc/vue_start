@@ -1,20 +1,47 @@
 <template>
 <nav class="menu center">
         <ul class="menu__ul">
-            <li class="menu__ul_list"><a href="#" class="menu__ul_link">Home</a>
-            <DropMenu/></li>
-            <li class="menu__ul_list"><a href="CatalogMan" class="menu__ul_link">Man</a>
-            <DropMenu/>
+            <li class="menu__ul_list">
+              <router-link :to="{name: 'Home'}" class="menu__ul_link">
+                Home
+              </router-link>
             </li>
-            <li class="menu__ul_list"><a href="#" class="menu__ul_link">Women</a>
-            <DropMenu/></li>
-            <li class="menu__ul_list"><a href="#" class="menu__ul_link">Kids</a>
-            <DropMenuLast/></li>
-            <li class="menu__ul_list"><a href="#" class="menu__ul_link">Accoseriese</a>
-            <DropMenuLast/></li>
-            <li class="menu__ul_list"><a href="#" class="menu__ul_link">Featured</a>
-            <DropMenuLast/></li>
-            <li class="menu__ul_list"><a href="#" class="menu__ul_link">Hot&nbsp;Deals</a></li>
+            <li class="menu__ul_list">
+              <router-link :to="{name: 'CatalogMan'}" class="menu__ul_link">
+                Man
+              </router-link>
+              <DropMenu/>
+            </li>
+            <li class="menu__ul_list">
+              <router-link :to="{name: 'CatalogMan'}" class="menu__ul_link">
+                Women
+              </router-link>
+              <DropMenu/>
+            </li>
+            <li class="menu__ul_list">
+              <router-link :to="{name: 'CatalogMan'}" class="menu__ul_link">
+                Kids
+              </router-link>
+              <DropMenuLast/>
+            </li>
+            <li class="menu__ul_list">
+              <router-link :to="{name: 'CatalogMan'}" class="menu__ul_link">
+                Accoseriese
+              </router-link>
+              <DropMenuLast/>
+            </li>
+            <li class="menu__ul_list">
+              <router-link :to="{name: 'CatalogMan'}" class="menu__ul_link">
+                Featured
+              </router-link>
+              <DropMenuLast/>
+            </li>
+            <li class="menu__ul_list">
+              <router-link :to="{name: 'CatalogMan'}" class="menu__ul_link">
+                Hot&nbsp;Deals
+              </router-link>
+              <DropMenuLast/>
+              </li>
         </ul>
     </nav>
 </template>

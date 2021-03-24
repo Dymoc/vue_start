@@ -1,13 +1,15 @@
 <template>
 <div class="sc_product">
-            <ScProductCart/>
-            <ScProductCart/>
-            <ScProductCart/>
-            <div class="sc_button">
-                <button class="sc_button_clear">cLEAR SHOPPING CART</button>
-                <button class="sc_button_continue">cONTINUE sHOPPING</button>
-            </div>
-        </div>
+  <ScProductCart
+    v-for="item in goodsItems"
+    v-bind:item="item"
+    v-bind:key="item.productId"
+  ></ScProductCart>
+  <div class="sc_button">
+    <button class="sc_button_clear">cLEAR SHOPPING CART</button>
+    <button class="sc_button_continue">cONTINUE sHOPPING</button>
+  </div>
+</div>
 </template>
 
 <script>
@@ -15,8 +17,14 @@ import ScProductCart from '@/components/ScProductCart.vue';
 
 export default {
   name: 'ScProduct',
+  goodsItems: [],
   components: {
     ScProductCart,
+  },
+  computed: {
+    goodsItems() {
+      return this.$store.state.goods.goodsItems;
+    },
   },
 };
 </script>

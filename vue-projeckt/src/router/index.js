@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
+import SinglePage from '../views/SinglePage.vue';
 
 const routes = [
   {
@@ -22,10 +23,15 @@ const routes = [
     name: 'ShopingCart',
     component: () => import(/* webpackChunkName: "start" */ '../views/ShopingCart.vue'),
   },
+  // {
+  //   path: '/SinglePage/:id',
+  //   name: 'SinglePage',
+  //   component: () => import(/* webpackChunkName: "start" */ '../views/SinglePage.vue'),
+  // },
   {
     path: '/SinglePage/:id',
     name: 'SinglePage',
-    component: () => import(/* webpackChunkName: "start" */ '../views/SinglePage.vue'),
+    component: SinglePage,
   },
 ];
 

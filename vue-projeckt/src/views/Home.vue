@@ -17,7 +17,7 @@
         </div>
         <div class="prduct_bottom">
             <button class="button">Browse All Product
-              <i class="fa fa-long-arrow-alt-right"></i></button>
+              <i class="fas fa-long-arrow-alt-right"></i></button>
         </div>
         </section>
         <Feature/>

@@ -1,5 +1,5 @@
 {
-  "name": "vue-projeckt",
+  "name": "vue-test",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,7 +13,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/vue-fontawesome": "^2.0.2",
+    "@fortawesome/vue-fontawesome": "^3.0.0-3",
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
     "font-awesome": "4.7.0",

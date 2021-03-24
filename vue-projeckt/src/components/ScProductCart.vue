@@ -1,26 +1,50 @@
 <template>
      <artical class="sc_product_cart">
           <a href="SinglePage" class="sc_product_cart_a">
-               <img src="../assets/imgs/myAccount_img_1.png"
+               <img :src="item.productImg"
                     alt="" class="sc_product_cart_a_img"></a>
           <div class="sc_product_cart_info">
                <a href="SinglePage" class="sc_product_cart_info_h1">
-                    Mango People T-shirt</a>
+                    {{ item.productName }}</a>
                <div class="sc_product_cart_info_color"><span>Color:</span> Red</div>
                <div class="sc_product_cart_info_size"><span>Size:</span> Xll</div>
           </div>
-          <div class="sc_product_cart_price">$150</div>
-          <input class="sc_product_cart_quantity" type="number" min="0" max="99">
+          <div class="sc_product_cart_price">${{ item.productPrice}}</div>
+          <input class="sc_product_cart_quantity"
+          type="number" min="0" max="99" :placeholder= "item.productQuantity"
+          v-model="quantity">
+          <!-- <h1>{{ quantity }}</h1> -->
           <div class="sc_product_cart_shipping">FREE</div>
-          <div class="sc_product_cart_subtotal">$300</div>
-          <div class="sc_product_cart_action"><a href="#">
+          <div class="sc_product_cart_subtotal">${{ quantity * item.productPrice}}</div>
+          <div class="sc_product_cart_action"><a  @click="del(item)">
                <i class="fas fa-backspace"></i></a></div>
      </artical>
 </template>
+
 <script>
+import { mapActions } from 'vuex';
 
 export default {
   name: 'ScProductCart',
+  data: () => ({
+    quantity: '',
+  }),
+  methods: {
+    ...mapActions(['delGood']),
+    del(item) {
+      this.delGood(item);
+    },
+  },
+  props: ['item'],
+  watch: {
+    quantity(newValue, oldValue) {
+      console.log(`${newValue}, ${oldValue}`);
+    },
+  },
+  // quantity() {
+  //   return item.productQuantity;
+  // },
+  // quantity: this.item.productQuantity,
 };
 </script>
 
@@ -43,6 +67,10 @@ export default {
 
 .sc_product_cart_a {
   margin-left: 0px;
+}
+
+.sc_product_cart_a img {
+  height: 100px;
 }
 
 .sc_product_cart_a img:hover {
