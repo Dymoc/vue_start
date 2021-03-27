@@ -3,8 +3,9 @@
           <div class="sc_info_total_sub">Sub total ${{ totalCoast }}</div>
           <div class="sc_info_total_grund">GRAND TOTAL <span class="siteColor">
                ${{ totalCoast }}</span></div>
-          <button class="sc_info_total_button" onclick="location ='Checkout'">
-               proceed to checkout</button>
+          <router-link :to="{ name: 'Checkout'}">
+            <button class="sc_info_total_button">proceed to checkout</button>
+          </router-link>
      </div>
 </template>
 

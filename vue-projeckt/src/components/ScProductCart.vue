@@ -1,5 +1,5 @@
 <template>
-     <artical class="sc_product_cart">
+     <div class="sc_product_cart">
           <router-link :to="{ name: 'SinglePage', params: { id: item.productId }}"
           class="sc_product_cart_a">
                <img :src="item.productImg" alt="" class="sc_product_cart_a_img">
@@ -15,12 +15,12 @@
           <input class="sc_product_cart_quantity"
           type="number" min="0" max="99" :placeholder= "item.productQuantity"
           v-model="quantity">
-          <!-- <h1>{{ quantity }}</h1> -->
+          <h1>{{ quantity }}</h1>
           <div class="sc_product_cart_shipping">FREE</div>
-          <div class="sc_product_cart_subtotal">${{ quantity * item.productPrice}}</div>
+          <div class="sc_product_cart_subtotal">${{ item.productQuantity * item.productPrice}}</div>
           <div class="sc_product_cart_action"><a  @click="del(item)">
                <i class="fas fa-backspace"></i></a></div>
-     </artical>
+     </div>
 </template>
 
 <script>
@@ -28,25 +28,25 @@ import { mapActions } from 'vuex';
 
 export default {
   name: 'ScProductCart',
-  data: () => ({
-    quantity: '',
-  }),
+
+  quantity() {
+    return this.item.productQuantity;
+  },
   methods: {
     ...mapActions(['delGood']),
     del(item) {
       this.delGood(item);
     },
+    updateQantity() {
+      console.log('yes');
+    },
   },
   props: ['item'],
   watch: {
-    quantity(newValue, oldValue) {
-      console.log(`${newValue}, ${oldValue}`);
+    quantity() {
+      console.log('Переменная изменилась');
     },
   },
-  // quantity() {
-  //   return item.productQuantity;
-  // },
-  // quantity: this.item.productQuantity,
 };
 </script>
 
