@@ -28,23 +28,27 @@ import { mapActions } from 'vuex';
 
 export default {
   name: 'ScProductCart',
-
-  quantity() {
-    return this.item.productQuantity;
+  data() {
+    return {
+      quantity: '',
+    };
   },
   methods: {
     ...mapActions(['delGood']),
     del(item) {
       this.delGood(item);
     },
-    updateQantity() {
-      console.log('yes');
-    },
+  },
+  beforeMaunted() {
+    this.quantity = this.item.productQuantity;
   },
   props: ['item'],
   watch: {
-    quantity() {
-      console.log('Переменная изменилась');
+    quantity: {
+      deep: true,
+      handler() {
+        console.log('123');
+      },
     },
   },
 };
