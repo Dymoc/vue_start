@@ -46,7 +46,7 @@ export default {
 }
 
 .fa {
-  font-size: 32px;
+  font-size: 16px;
   color: #b2b2b2;
   text-align: right;
   letter-spacing: 0.03em;

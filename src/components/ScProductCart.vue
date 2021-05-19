@@ -30,7 +30,7 @@ export default {
   name: 'ScProductCart',
   data() {
     return {
-      quantity: '',
+      quantity: 0,
     };
   },
   methods: {
